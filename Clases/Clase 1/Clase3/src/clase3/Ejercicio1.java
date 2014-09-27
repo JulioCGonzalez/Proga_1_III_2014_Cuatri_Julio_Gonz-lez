@@ -8,30 +8,33 @@ package clase3;
 
 /**
  *
- * @author Julio César
+ * @author Nerea
  */
 public class Ejercicio1 {
-    public Ejercicio1()
-    {
-        
-    }
-    String numeros = "";
-    private String ImprimirNumeros(int numero)
-    {
-        
-        for (int i = 0; i < 10; i++) {
-            numeros+=getNumeros()+ i+"";
-            
-        }
-        return getNumeros();
-    }
-
-    public String getNumeros() {
-        return numeros;
-    }
-
-    public void setNumeros(String numeros) {
-        this.numeros = numeros;
-    }
+    private String numeros="";
+  public Ejercicio1(int numero)
+  {
+  this.ImprimirNumeros(numero);
+  }
+   private String ImprimirNumeros(int numero)    
+   {
+       for (int i = 0; i < 10; i++) {
+           numeros +=getNumeros()+ i+"";
+       
+       }
+       return getNumeros(){
+   }
+       public String getNumeros(){
+       return numeros;
+       }
+   }         
+           
+    
+    
+    
+    
+    
+    
+    
     
 }

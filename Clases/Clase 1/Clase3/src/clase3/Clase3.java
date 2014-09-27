@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Julio César
+ * @author Nerea
  */
 public class Clase3 {
 
@@ -17,19 +17,16 @@ public class Clase3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner oEjercicio1 = new Ejercicio1(Integer.parseInt(T);
-        
+        // TODO code application logic here
+
         int cantidad;
         int suma = 0;
 
         Scanner teclado = new Scanner(System.in);
-
-        System.out.println("Digite el número de impresión que deseas ver");
+        System.out.println("Digite el # de impresiones que desea ver");
 
         cantidad = Integer.parseInt(teclado.nextLine());
-
-        System.out.println("\n");
-
+        System.out.print("\n");
         for (int i = 0; i <= cantidad; i++) {
             System.out.println(i);
         }
@@ -38,28 +35,40 @@ public class Clase3 {
         System.out.print("\n");
         for (int i = cantidad; i > 0; i--) {
             System.out.println(i);
+
         }
+        //Ciclo while
         while (suma <= cantidad) {
             System.out.print(suma);
             System.out.print(" - ");
             suma = suma + 1;
         }
         System.out.print("\n");
+        System.out.print("Inverso");
         suma = cantidad;
         while (suma >= 0) {
-            System.out.print(suma);
-            System.out.print(" - ");
+            System.out.println(suma);
+            System.out.println(" - ");
             suma = suma - 1;
-        }
-        System.out.print("\n");
 
+        }
+        //ciclo Do While
         suma = 0;
         do {
             System.out.print(suma);
-            System.out.print(" _ ");
+            System.out.print(" - ");
             suma = suma + 1;
-        } while (suma <= cantidad);
-        System.out.print("\n");
-    }
 
+        } while (suma <= cantidad);
+
+        System.out.print("\n");
+
+        suma = cantidad;
+        do {
+            System.out.print(suma);
+            System.out.print(" - ");
+            suma = suma - 1;
+
+        } while (suma >= 0);
+    }
 }

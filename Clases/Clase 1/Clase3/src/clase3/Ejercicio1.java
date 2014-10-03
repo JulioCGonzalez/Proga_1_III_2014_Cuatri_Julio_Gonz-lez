@@ -22,9 +22,10 @@ public class Ejercicio1 {
            numeros +=getNumeros()+ i+"";
        
        }
-       return getNumeros(){
-   }
        public String getNumeros(){
+           return numeros;
+   }
+       public void setNumero(String numeros){
        return numeros;
        }
    }         

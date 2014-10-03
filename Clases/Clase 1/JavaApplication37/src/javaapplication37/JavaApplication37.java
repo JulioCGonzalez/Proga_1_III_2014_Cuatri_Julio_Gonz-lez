@@ -75,6 +75,8 @@ public class JavaApplication37 {
                     valor2 = teclado.nextDouble();
                     System.out.println("La potencia del valor es " + Ope.Pontecia(valor1, valor2));
                     break;
+                default:
+                    System.out.println("Error de opción");
             }
             System.out.println("Desea continuar");
             continuar = teclado.next().charAt(0);

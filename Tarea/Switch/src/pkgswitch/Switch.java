@@ -31,9 +31,8 @@ public class Switch {
                     + "1.Mes \n"
                     + "2.Ingrese un valor \n"
                     + "3.Ingresar una letra \n"
-                    + "4.Multiplicación de los valores \n"
-                    + "5.Raíz del valor \n"
-                    + "6.Potencia del valor \n");
+                    + "4.Año y mes \n"
+                    + "5.Raíz del valor \n");
             opt = teclado.nextInt();
 
             switch (opt) {

@@ -2,7 +2,7 @@ package javaapplication;
 
 import java.util.Scanner;
 
-public class Ejercicio02 {
+public class Ejercicio03 {
 private Scanner teclado;
     private int[][] matriz;
     
@@ -20,16 +20,21 @@ private Scanner teclado;
             }
         }
     }
-           
-    public void imprimirVertices() {
-    	System.out.println("Vértice superior izquierdo:");
-        System.out.println(matriz[0][0]);
-    	System.out.println("Vértice superior derecho:");        
-        System.out.println(matriz[0][matriz[0].length-1]);
-    	System.out.println("Vértice inferior izquierdo:");        
-        System.out.println(matriz[matriz.length-1][0]);
-    	System.out.println("Vértice inferior derecho:");        
-        System.out.println(matriz[matriz.length-1][matriz[matriz.length-1].length-1]);
-    }    
-          
+        
+    public void imprimirMayor() {
+    	int mayor=matriz[0][0];
+    	int filamay=0;
+    	int columnamay=0;
+        for(int f=0;f<matriz.length;f++) {
+            for(int c=0;c<matriz[f].length;c++) {
+                if (matriz[f][c]>mayor) {
+                    mayor=matriz[f][c];
+                    filamay=f;
+                    columnamay=c;
+                }
+            }
+        }
+        System.out.println("El elemento mayor es:"+mayor);
+        System.out.println("Se encuentra en la fila:"+filamay+ " y en la columna: "+columnamay);
+    }
 }

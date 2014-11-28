@@ -1,20 +1,14 @@
 package Nodos;
 
 public class NodoUsuarios {
-int numerosocio;
-String nombre;
-int morosidad;
-String direccion;
-int telefono;
-NodoUsuarios siguiente;
+private int numerosocio;
+private String nombre;
+private String morosidad;
+private String direccion;
+private int telefono;
+private NodoUsuarios siguiente;
 
-    public NodoUsuarios() {
-    numerosocio=0;
-    nombre="";
-    morosidad=0;
-    telefono=0;
-    siguiente=null;
-    }
+
 
     public int getNumerosocio() {
         return numerosocio;
@@ -32,13 +26,14 @@ NodoUsuarios siguiente;
         this.nombre = nombre;
     }
 
-    public int getMorosidad() {
+    public String getMorosidad() {
         return morosidad;
     }
 
-    public void setMorosidad(int morosidad) {
+    public void setMorosidad(String morosidad) {
         this.morosidad = morosidad;
     }
+
 
     public String getDireccion() {
         return direccion;
@@ -64,9 +59,9 @@ NodoUsuarios siguiente;
         this.siguiente = siguiente;
     }
 
-    public boolean getNumerosocio(boolean equals) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
+
+  
 
     
 }

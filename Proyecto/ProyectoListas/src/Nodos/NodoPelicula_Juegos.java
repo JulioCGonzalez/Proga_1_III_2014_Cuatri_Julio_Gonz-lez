@@ -1,25 +1,18 @@
 package Nodos;
 
-public class NodoPelicula_Juegos {
-int id;
-String nombre;
-String tipo;
-int costo;
-int fechaentrega;
-int fecherecepcion;
-String genero;
-NodoPelicula_Juegos siguiente;
+import java.util.Date;
 
-    public NodoPelicula_Juegos() {
-    id = 0;
-    nombre = "";
-    tipo = "";
-    costo = 0;
-    fechaentrega = 0;
-    fecherecepcion = 0;
-    genero = "";
-    siguiente=null;
-    }
+public class NodoPelicula_Juegos {
+private int id;
+private String nombre;
+private String tipo;
+private int costo;
+private Date fechaentrega;
+private Date fecherecepcion;
+private String genero;
+private NodoPelicula_Juegos siguiente;
+
+    
 
     public int getId() {
         return id;
@@ -53,21 +46,23 @@ NodoPelicula_Juegos siguiente;
         this.costo = costo;
     }
 
-    public int getFechaentrega() {
+    public Date getFechaentrega() {
         return fechaentrega;
     }
 
-    public void setFechaentrega(int fechaentrega) {
+    public void setFechaentrega(Date fechaentrega) {
         this.fechaentrega = fechaentrega;
     }
 
-    public int getFecherecepcion() {
+    public Date getFecherecepcion() {
         return fecherecepcion;
     }
 
-    public void setFecherecepcion(int fecherecepcion) {
+    public void setFecherecepcion(Date fecherecepcion) {
         this.fecherecepcion = fecherecepcion;
     }
+
+    
 
     public String getGenero() {
         return genero;

@@ -32,7 +32,7 @@ public class ListaUsarios {
         }
     }
 
-    public boolean Eliminar(int socio) {
+    public boolean Eliminar(String nombre) {
         NodoUsuarios siguienteUsuario = raiz;
         NodoUsuarios anteriror = siguienteUsuario;
         if (siguienteUsuario == null) {
@@ -40,7 +40,8 @@ public class ListaUsarios {
             return true;
         }
         while (siguienteUsuario != null) {
-            if (siguienteUsuario.getNumerosocio(equals(socio))) {
+            String temp = siguienteUsuario.getNombre();
+            if (temp.equals(nombre)) {
                 if (raiz == siguienteUsuario) {
                     raiz = siguienteUsuario.getSiguiente();
                 }

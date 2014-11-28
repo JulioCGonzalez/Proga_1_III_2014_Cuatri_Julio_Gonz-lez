@@ -50,12 +50,27 @@ public class ListaPelicula_Juegos {
         return false;
     }
 
-    public String Imprimir(NodoPelicula_Juegos pelicula) {
+     public String ImprimirNombre() {
         NodoPelicula_Juegos aux;
         aux = raiz;
         String temporal = "";
         while (aux != null) {
             temporal += "Nombre: " + aux.getNombre();
+            temporal += "\n";
+            aux = aux.getSiguiente();
+        }
+
+        return temporal;
+    }
+    
+    public String Imprimir() {
+        NodoPelicula_Juegos aux;
+        aux = raiz;
+        String temporal = "";
+        while (aux != null) {
+            temporal += "Id: " + aux.getId() +"Nombre: " + aux.getNombre()+ "Tipo: " + aux.getTipo()
+                    +"Costo: "+ aux.getCosto() + "Fecha de Entrega: " + aux.getFechaentrega() 
+                    + "Fecha de recepcion: " + aux.getFecherecepcion() + "Genero: " + aux.getGenero();
             temporal += "\n";
             aux = aux.getSiguiente();
         }

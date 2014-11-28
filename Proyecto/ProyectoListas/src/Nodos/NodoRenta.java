@@ -1,19 +1,25 @@
 package Nodos;
 
-public class NodoRenta {
-int numerosocio;
-String pelicula,juego;
-int idrenta;
-NodoRenta siguiente;
+import Listas.ListaPelicula_Juegos;
+import Listas.ListaUsarios;
 
-    public NodoRenta() {
-    numerosocio=0;
-    pelicula="";
-    juego="";
-    idrenta = 0;
-    siguiente=null;
+public class NodoRenta {
+
+    private String nombre;
+    private int numerosocio;
+    private int renta;
+    private int idrenta;
+    private NodoRenta siguiente;
+
+    public String getNombre() {
+        return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    
     public int getNumerosocio() {
         return numerosocio;
     }
@@ -22,20 +28,12 @@ NodoRenta siguiente;
         this.numerosocio = numerosocio;
     }
 
-    public String getPelicula() {
-        return pelicula;
+    public int getRenta() {
+        return renta;
     }
 
-    public void setPelicula(String pelicula) {
-        this.pelicula = pelicula;
-    }
-
-    public String getJuego() {
-        return juego;
-    }
-
-    public void setJuego(String juego) {
-        this.juego = juego;
+    public void setRenta(int renta) {
+        this.renta = renta;
     }
 
     public int getIdrenta() {

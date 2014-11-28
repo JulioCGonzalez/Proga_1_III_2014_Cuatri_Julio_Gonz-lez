@@ -2,20 +2,18 @@ package Listas;
 
 import Nodos.NodoRenta;
 
-
 public class ListaRenta {
 
     NodoRenta raiz;
-    
 
     public void Insertar(NodoRenta usuario) {
         NodoRenta nuevo;
         nuevo = new NodoRenta();
+        nuevo.setNombre(usuario.getNombre());
         nuevo.setNumerosocio(usuario.getNumerosocio());
+        nuevo.setRenta(usuario.getRenta());
         nuevo.setIdrenta(usuario.getIdrenta());
-        nuevo.setPelicula(usuario.getPelicula());
-        nuevo.setJuego(usuario.getJuego());
-        
+
         if (raiz == null) {
             nuevo.setSiguiente(null);
             raiz = nuevo;
@@ -49,18 +47,47 @@ public class ListaRenta {
         return false;
     }
 
-    public String Imprimir(NodoRenta usuario) {
+    public String ImprimirMayor() {
         NodoRenta aux;
         aux = raiz;
         String temporal = "";
-        while (aux != null) {
-                temporal += "Numero de socio:  " + aux.getNumerosocio() + "Peliculas: " + aux.getPelicula()+
-                        "Juegos: "+aux.getJuego() + "Id Renta: " + aux.getIdrenta();
+         while (aux != null) {
+                if (aux.getRenta() >= 50)
+                temporal +=  "Nombre:  " + aux.getNombre();
                 temporal += "\n";
                 aux = aux.getSiguiente();
             }
+            
         return temporal;
         }
-        
-    }    
+    
+    public String ImprimirMenor() {
+        NodoRenta aux;
+        aux = raiz;
+        String temporal = "";
+         while (aux != null) {
+                if (aux.getRenta() <= 50)
+                temporal += "Nombre:  " + aux.getNombre();
+                temporal += "\n";
+                aux = aux.getSiguiente();
+            }
+            
+        return temporal;
+        }
+    }
+
+//    public String ImprimirRenta() {
+//        NodoRenta aux;
+//        aux = raiz;
+//        String temporal = "";
+//        if (aux.getRenta() >= 50) {
+//            while (aux != null) {
+//                temporal += "Numero de socio:  " + aux.getNumerosocio() + "Peliculas: " + aux.getPelicula()
+//                        + "Juegos: " + aux.getJuego() + "Id Renta: " + aux.getIdrenta();
+//                temporal += "\n";
+//                aux = aux.getSiguiente();
+//            }
+//        }
+//        return temporal;
+//    }
 

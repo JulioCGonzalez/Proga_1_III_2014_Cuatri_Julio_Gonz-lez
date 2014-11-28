@@ -3,19 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practicadeexamen;
+package clase14;
+
+import Fronted.FmrLogin;
+import Fronted.Main;
 
 /**
  *
  * @author Julio César
  */
-public class PracticadeExamen {
+public class Clase14 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        FmrLogin fl = new FmrLogin();
+        fl.setVisible(true);
     }
     
 }
